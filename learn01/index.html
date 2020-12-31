@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../common/js/react.development.js"></script>
+  <script src="../common/js/react-dom.development.js"></script>
+  <!-- <script src="../common/js/react.development.js"></script> -->
+
+  <script type="text/babel"> //使用babel编译 
+    const id ="aa"
+    const VDOM = (
+      <div>
+        <h1 id="h1">
+          <span style={{color:"red", fontSize:"20px"}} id={id}>span</span>  
+        </h1>
+      </div>
+    )
+
+    ReactDOM.render(VDOM, document.getElementById('app'))
+
+    /*
+    * jsx 语法规则
+      1定义虚拟Dom，不需要加引号
+      2需要使用变量时，使用{}
+      3 样式类名用 className
+      4 内敛样式 使用{{ 驼峰 对象 引号}}
+      5 标签只能有一个根标签
+      6 标签必须闭合
+      7 标签首字母
+       1）小写开头，将标签转为html中同名元素，若html中无法对应该同名元素，报错
+       2）大写开头，react就去渲染对应的组件，如果没有找到，报错
+    */
+  </script>
+</body>
+</html>
